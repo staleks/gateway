@@ -1,0 +1,31 @@
+info:
+  component: API Gateway
+
+server:
+  port: 8765
+
+zuul:
+  routes:
+    destination-service:
+      path: /destination/**
+      serviceId: destination
+    quoting-service:
+      path: /quoting/**
+      serviceId: quoting
+    weather-service:
+      path: /weather/**
+      serviceId: weather
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false

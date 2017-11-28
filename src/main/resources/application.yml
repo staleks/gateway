@@ -16,7 +16,7 @@ zuul:
       path: /weather/**
       serviceId: weather
     holiday-service:
-      path: /holiday/**
+      path: /**
       serviceId: holiday
 
 

@@ -15,6 +15,9 @@ zuul:
     weather-service:
       path: /weather/**
       serviceId: weather
+    holiday-service:
+      path: /holiday/**
+      serviceId: holiday
 
 
 eureka:
